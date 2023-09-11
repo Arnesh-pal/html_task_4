@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML_Task_4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px; /* Adjust this width as needed for alignment */
+            text-align: left; /* Align label text to the left */
+            padding-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="age"],
+        select {
+            width: 50%; /* Adjust this width as needed for input size */
+            padding: 6px;
+            margin-left: 150px; /* Shift the input boxes to the left */
+        }
+
+        /* Style for the Re Password label */
+        .input-container.repassword label {
+            width: 200px; /* Keep the same width as other labels */
+            margin-left: 0; /* Remove left margin */
+            text-align: left; /* Align text to the left */
+        }
+
+        /* Style for the Re Password input */
+        .input-container.repassword input[type="password"] {
+            width: 35%; /* Set input width to 40% */
+            margin-left: 115px; /* Shift the input box to the left */
+        }
+
+        button.registerbtn {
+            width: 60px; /* Adjust the button width to your preferred size */
+            padding: 5px; /* Adjust button padding as needed */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for the gender select element */
+        .input-container.gender select {
+            width: 15%; /* Set select width to 15% */
+            margin-left: 116px; /* Remove margin-left property */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div class="input-container">
+                    <label for="fullname">Fullname:</label>
+                    <input type="text" name="Fullname" id="fullname" size="30" />
+                </div>
+                <div class="input-container">
+                    <label for="email">Username:</label>
+                    <input type="email" name="email" id="email" size="15" />
+                </div>
+                <div class="input-container">
+                    <label for="psw">Password:</label>
+                    <input type="password" name="psw" id="psw" required />
+                </div>
+                <div class="input-container repassword">
+                    <label for="psw-repeat">Re Password:</label>
+                    <input type="password" name="psw-repeat" id="psw-repeat" required />
+                </div>
+                <div class="input-container">
+                    <label for="address">Address:</label>
+                    <input type="text" name="Address" id="address" size="30" />
+                </div>
+                <div class="input-container">
+                    <label for="age">Age:</label>
+                    <input type="age" name="age" id="age" />
+                </div>
+                <!-- Add a class name for the gender input container -->
+                <div class="input-container gender">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="registerbtn">Save</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
